@@ -7,8 +7,8 @@ Requirements:
 
 Make sure that Elasticsearch is up and running. Change the url accordingly in routes/index.js.
 
-`npm install`
-`npm start`
+    `npm install`
+    `npm start`
 
 http://localhost:3000/
 
