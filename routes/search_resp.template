@@ -1,0 +1,10 @@
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+  <div class="card">
+    <div class="header bg-light-blue">
+      <h2>es_header</h2>
+    </div>
+    <div class="body">
+      <pre>es_resp</pre>
+    </div>
+  </div>
+</div>

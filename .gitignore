@@ -1,3 +1,10 @@
+
+# download and store AdminBSBMaterialDesign in public folder https://github.com/gurayyarar/AdminBSBMaterialDesign
+public/AdminBSBMaterialDesign/
+
+#mac
+.DS_Store
+
 # Logs
 logs
 *.log
