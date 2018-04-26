@@ -2,8 +2,8 @@
 A simple search engine for the Datalake
 
 Requirements:
-  Elasticsearch
-  Node.js, npm
+* Elasticsearch
+* Node.js, npm
 
 Make sure that Elasticsearch is up and running. Change the url accordingly in routes/index.js.
 
