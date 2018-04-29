@@ -14,17 +14,20 @@ var client = new elasticsearch.Client({
 
 const getjson = {
   es_body(body) {
+    var search_resp_header_template = fs.readFileSync('routes/search_resp_header.template', { 'encoding': 'utf8'});
     var search_resp_template = fs.readFileSync('routes/search_resp.template', { 'encoding': 'utf8'});
-    es_resp = '<div new_row>'
+    var search_resp_footer_template = fs.readFileSync('routes/search_resp_footer.template', { 'encoding': 'utf8'});
+    es_resp = search_resp_header_template
     count = 0
     body.hits.hits.forEach(function(elem) {
-      if(count == 3 || count == 6 || count == 9) {
-        es_resp = es_resp + '</div><div class="row">'
-      }
-      es_resp = es_resp + search_resp_template.replace('es_header', count).replace('es_resp',JSON.stringify(elem._source, null, 2))
       count = count + 1
+      if(count % 2 ==  0) {
+        es_resp = es_resp + search_resp_template.replace(new RegExp('resp_col','g'), 'cyan').replace(new RegExp('resp_id','g'), count).replace(new RegExp('resp_json','g'),JSON.stringify(elem._source, null, 2))
+      } else {
+        es_resp = es_resp + search_resp_template.replace(new RegExp('resp_col','g'), 'teal').replace(new RegExp('resp_id','g'), count).replace(new RegExp('resp_json','g'),JSON.stringify(elem._source, null, 2))
+      }
     })
-    es_resp = es_resp + '</div>'
+    es_resp = es_resp + search_resp_footer_template
     return es_resp
   }
 }

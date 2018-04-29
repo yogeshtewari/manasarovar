@@ -1,22 +1,18 @@
-<section class="content">
-  <div class="container-fluid">
-    <!-- Input -->
-    <div class="row clearfix">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="card">
-          <div class="header">
-            <h2>ElasticSearch - Search</h2>
-          </div>
-          <div class="body">
-            <div class="row clearfix">
-              <div class="col-sm-12">
-                <div class="form-group form-group-lg">
-                  <div class="form-line">
-                    <form action="/search" method="post">
-                      <input class="form-control" id="search_term" type="text" name="search_term" placeholder="Enter Search Term:" />
-                    </form>
-                  </div>
-                </div>
+<!-- Input -->
+<div class="row clearfix">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="card">
+      <div class="header">
+        <h2>ElasticSearch - Search</h2>
+      </div>
+      <div class="body">
+        <div class="row clearfix">
+          <div class="col-sm-12">
+            <div class="form-group form-group-lg">
+              <div class="form-line">
+                <form action="/search" method="post">
+                  <input class="form-control" id="search_term" type="text" name="search_term" placeholder="Enter Search Term:" />
+                </form>
               </div>
             </div>
           </div>
@@ -24,4 +20,4 @@
       </div>
     </div>
   </div>
-</section>
+</div>
